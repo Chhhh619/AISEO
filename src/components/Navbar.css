@@ -35,18 +35,22 @@
 }
 
 /* Logo Pill */
+/* Logo Pill */
 .logo-pill {
-    /* Solid blue background for text logo on hero to match brand */
-    background: #1a56a3;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Hero State: Transparent/Glass */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     padding: var(--space-xs) var(--space-md);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
+/* Scrolled State: Solid Blue Pill */
 .navbar.scrolled .logo-pill {
-    background: transparent;
-    border-color: transparent;
-    box-shadow: none;
+    background: #1a56a3;
+    /* CariSEO Blue */
+    border-color: #1a56a3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .logo-img {
