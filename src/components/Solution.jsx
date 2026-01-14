@@ -19,7 +19,7 @@ function Solution() {
             <div className="container">
                 <div className="solution-grid">
                     <div className="solution-content">
-                        <h2 className="section-title section-title-white text-left">What Is AI SEO Content Creation?</h2>
+                        <h2 className="section-title section-title-white text-left">What Is AI <span className="seo-highlight">SEO</span> Content Creation?</h2>
                         <ul className="check-list">
                             {features.map((feature, index) => (
                                 <li key={index}>

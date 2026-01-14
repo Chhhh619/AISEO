@@ -23,7 +23,6 @@ function Navbar() {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
-                {/* Logo Pill - swaps between text and background versions */}
                 <a href="#" className="nav-pill logo-pill">
                     <img
                         src={scrolled ? "/images/cariSeo_background.png" : "/images/cariSeo_text.png"}

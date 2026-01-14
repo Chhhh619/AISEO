@@ -39,7 +39,7 @@ function ContactForm() {
             <div className="glass-shape contact-shape-2"></div>
 
             <div className="container container-narrow">
-                <h2 className="section-title section-title-white">Start with a Free AI SEO Assessment</h2>
+                <h2 className="section-title section-title-white">Start with a Free AI <span className="seo-highlight">SEO</span> Assessment</h2>
                 <p className="section-subtitle">
                     We review your website and show how AI SEO can help.
                 </p>
@@ -112,10 +112,10 @@ function ContactForm() {
                                 required
                             >
                                 <option value="">Select company size</option>
-                                <option value="1-10">1-10 employees</option>
-                                <option value="11-50">11-50 employees</option>
-                                <option value="51-200">51-200 employees</option>
-                                <option value="200+">200+ employees</option>
+                                <option value="1-10">1-5 employees</option>
+                                <option value="11-50">6-20 employees</option>
+                                <option value="51-200">21-50 employees</option>
+                                <option value="200+">51+ employees</option>
                             </select>
                         </div>
                         <div className="form-group">

@@ -11,7 +11,7 @@ function Results() {
     return (
         <section className="section section-dark" id="results">
             <div className="container">
-                <h2 className="section-title section-title-white">With the Right AI SEO Strategy, Businesses Typically See:</h2>
+                <h2 className="section-title section-title-white" style={{ fontSize: '2.2rem' }}>With the Right AI SEO Strategy, Businesses Typically See:</h2>
                 <div className="results-grid">
                     {items.map((item, index) => (
                         <div key={index} className="result-card">
@@ -21,7 +21,7 @@ function Results() {
                     ))}
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

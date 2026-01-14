@@ -65,7 +65,7 @@ function Pricing() {
                                 onClick={scrollToContact}
                                 className={`btn ${pkg.featured ? 'btn-primary' : 'btn-white'} btn-full`}
                             >
-                                👉 Get Started
+                                Get Started
                             </a>
                         </div>
                     ))}

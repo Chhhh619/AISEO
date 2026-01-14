@@ -23,7 +23,7 @@ function Problem() {
                     <p className="bold-text">
                         The issue is not effort.
                         <br />
-                        The issue is content without SEO strategy.
+                        The issue is content without <span className="seo-highlight">SEO</span> strategy.
                     </p>
                 </div>
             </div>

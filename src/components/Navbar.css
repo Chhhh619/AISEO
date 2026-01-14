@@ -51,13 +51,11 @@
 
 /* Scrolled State: Transparent Pill */
 .navbar.scrolled .logo-pill {
-    background: transparent;
-    border-color: transparent;
+    background: var(--primary);
+    border-color: var(--primary);
     box-shadow: none;
     backdrop-filter: none;
-    padding: 0;
-    max-height: 50px;
-    /* Constrain height */
+    /* Maintain padding from base class to ensure identical dimensions */
 }
 
 .logo-img {
@@ -68,12 +66,10 @@
     display: block;
 }
 
-/* Scrolled logo - make it match the hero pill size */
-/* Scrolled logo - make it match the hero pill size */
+/* Scrolled logo image - keep same size as hero */
 .navbar.scrolled .logo-img {
-    height: 42px;
-    border-radius: 50px;
-    object-fit: contain;
+    height: 38px;
+    /* Consistent with hero state */
 }
 
 /* CTA Pill */
