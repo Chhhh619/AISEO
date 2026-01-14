@@ -11,7 +11,7 @@ function WhoIsFor() {
     return (
         <section className="section section-dark" id="who">
             <div className="container container-narrow">
-                <h2 className="section-title section-title-white">AI SEO Is Right for You If...</h2>
+                <h2 className="section-title section-title-white">AI <span className="seo-highlight">SEO</span> Is Right for You If...</h2>
                 <div className="who-card">
                     <ul className="who-list">
                         {items.map((item, index) => (

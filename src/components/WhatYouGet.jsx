@@ -11,7 +11,7 @@ function WhatYouGet() {
     return (
         <section className="section section-light" id="whatyouget">
             <div className="container">
-                <h2 className="section-title section-title-dark">Everything You Need for AI SEO</h2>
+                <h2 className="section-title section-title-dark">Everything You Need for AI <span className="seo-highlight">SEO</span></h2>
                 <div className="features-grid">
                     {items.map((item, index) => (
                         <div key={index} className="feature-card">

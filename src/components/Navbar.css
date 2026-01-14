@@ -56,19 +56,24 @@
     box-shadow: none;
     backdrop-filter: none;
     padding: 0;
+    max-height: 50px;
+    /* Constrain height */
 }
 
 .logo-img {
-    height: 40px;
+    height: 38px;
+    /* Slightly smaller base size */
     width: auto;
     transition: all 0.3s ease;
     display: block;
 }
 
-/* Scrolled logo might be slightly larger */
+/* Scrolled logo - make it match the hero pill size */
+/* Scrolled logo - make it match the hero pill size */
 .navbar.scrolled .logo-img {
-    height: 48px;
+    height: 42px;
     border-radius: 50px;
+    object-fit: contain;
 }
 
 /* CTA Pill */
@@ -190,21 +195,21 @@
     }
 
     .logo-img {
-        height: 40px;
+        height: 36px;
     }
 
     .navbar.scrolled .logo-img {
-        height: 48px;
-        /* Slightly larger for background logo */
+        height: 38px;
+        /* Consistent proportional size */
     }
 
     .logo-pill {
-        padding: 6px 12px;
+        padding: 4px 10px;
     }
 
     .navbar.scrolled .logo-pill {
-        padding: 0 4px;
-        /* Less padding for background logo */
+        padding: 0;
+        /* Let background logo fill vertically */
     }
 
     .navbar-container {

@@ -1,6 +1,7 @@
 .section-gradient {
     position: relative;
-    overflow: visible;
+    overflow: hidden;
+    /* Clip background shapes */
 }
 
 .contact-shape-1 {
