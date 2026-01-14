@@ -36,7 +36,7 @@ function Footer() {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <a href="#" className="footer-logo">
-                            <img src="/images/cariSeo_background.png" alt="CariSEO by Mampu AI" className="footer-logo-img" />
+                            <img src="/images/cariSeo_text.png" alt="CariSEO by Mampu AI" className="footer-logo-img" />
                         </a>
                         <p className="footer-location">Kuala Lumpur, Malaysia</p>
                     </div>
