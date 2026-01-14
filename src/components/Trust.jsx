@@ -2,11 +2,11 @@ import './Trust.css'
 
 function Trust() {
     const items = [
-        { icon: '🏢', text: 'Built specifically for SMEs' },
         { icon: '🤖', text: 'Strong AI and automation expertise' },
-        { icon: '🎯', text: 'SEO strategy first' },
         { icon: '🌏', text: 'Local Malaysia and SEA knowledge' },
-        { icon: '💰', text: 'Transparent pricing' }
+        { icon: '🏢', text: 'Built specifically for SMEs' },
+        { icon: '💰', text: 'Transparent pricing' },
+        { icon: '🎯', text: 'SEO strategy first' }
     ]
 
     return (

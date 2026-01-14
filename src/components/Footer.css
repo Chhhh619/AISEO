@@ -1,22 +1,27 @@
 /* Footer Slogan - Ogaki Digital Style */
 .footer-slogan {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-3xl) var(--space-md);
     overflow: hidden;
     border-top: 1px solid var(--border-light);
     background: var(--bg-dark);
 }
 
 .slogan-text {
-    font-size: clamp(3rem, 10vw, 8rem);
+    font-size: clamp(2.5rem, 8vw, 6rem);
     font-weight: 400;
     color: var(--text-white);
     text-align: center;
     letter-spacing: -0.03em;
     line-height: 1.1;
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(80px);
     animation: sloganSlideUp 1s ease-out forwards;
     animation-play-state: paused;
+}
+
+/* SEO in lighter blue */
+.seo-highlight {
+    color: #5a9bd5;
 }
 
 /* Intersection Observer will trigger this */
@@ -27,7 +32,7 @@
 @keyframes sloganSlideUp {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(80px);
     }
 
     100% {
@@ -39,6 +44,8 @@
 /* Main Footer */
 .footer {
     background: var(--bg-dark);
+    position: relative;
+    z-index: 10;
 }
 
 .footer-content {
@@ -100,6 +107,10 @@
     }
 
     .slogan-text {
-        font-size: clamp(2rem, 8vw, 4rem);
+        font-size: clamp(1.75rem, 8vw, 3rem);
+    }
+
+    .footer-slogan {
+        padding: var(--space-2xl) var(--space-md);
     }
 }

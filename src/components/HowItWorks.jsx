@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './HowItWorks.css'
 
 function HowItWorks() {
     const [activeTab, setActiveTab] = useState(0)
+    const sliderRef = useRef(null)
+    const [isDragging, setIsDragging] = useState(false)
+    const [startX, setStartX] = useState(0)
+    const [scrollLeft, setScrollLeft] = useState(0)
 
     const steps = [
         {
@@ -32,6 +36,61 @@ function HowItWorks() {
         }
     ]
 
+    // Touch/swipe handlers for mobile
+    const handleTouchStart = (e) => {
+        setIsDragging(true)
+        setStartX(e.touches[0].pageX)
+    }
+
+    const handleTouchMove = (e) => {
+        if (!isDragging) return
+    }
+
+    const handleTouchEnd = (e) => {
+        if (!isDragging) return
+        setIsDragging(false)
+
+        const endX = e.changedTouches[0].pageX
+        const diff = startX - endX
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0 && activeTab < steps.length - 1) {
+                setActiveTab(activeTab + 1)
+            } else if (diff < 0 && activeTab > 0) {
+                setActiveTab(activeTab - 1)
+            }
+        }
+    }
+
+    // Mouse drag handlers for desktop
+    const handleMouseDown = (e) => {
+        setIsDragging(true)
+        setStartX(e.pageX)
+    }
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return
+    }
+
+    const handleMouseUp = (e) => {
+        if (!isDragging) return
+        setIsDragging(false)
+
+        const diff = startX - e.pageX
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0 && activeTab < steps.length - 1) {
+                setActiveTab(activeTab + 1)
+            } else if (diff < 0 && activeTab > 0) {
+                setActiveTab(activeTab - 1)
+            }
+        }
+    }
+
+    const handleMouseLeave = () => {
+        setIsDragging(false)
+    }
+
     return (
         <section className="section section-light" id="how-it-works">
             <div className="container">
@@ -51,15 +110,27 @@ function HowItWorks() {
                     ))}
                 </div>
 
-                {/* Tab Content */}
-                <div className="tab-content">
+                {/* Tab Content - Swipeable */}
+                <div
+                    className="tab-content"
+                    ref={sliderRef}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseLeave}
+                    style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+                >
                     <div className="tab-icon">{steps[activeTab].icon}</div>
                     <h3 className="tab-title">{steps[activeTab].title}</h3>
                     <p className="tab-description">{steps[activeTab].description}</p>
+                    <p className="swipe-hint hide-desktop">← Swipe to navigate →</p>
                 </div>
 
                 {/* Mobile Swipe Dots */}
-                <div className="swipe-dots hide-desktop">
+                <div className="swipe-dots">
                     {steps.map((_, index) => (
                         <button
                             key={index}
